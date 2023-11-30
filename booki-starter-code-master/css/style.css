@@ -16,7 +16,6 @@
 body {
     display: flex;
     justify-content: center;
-
 }
 
 
@@ -92,7 +91,8 @@ header {
 .div-nav-header a {
 
     display: flex;
-    padding-top: 15px;  
+    padding-top: 15px; 
+    border-top: 3px transparent solid; 
 }
 
 
@@ -105,7 +105,8 @@ header {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;    
+    line-height: normal;  
+      
 }
 
 
@@ -127,32 +128,25 @@ header {
     align-content: center;
 }
 
-.infogroup-subtitle {
-   
-    
+.infogroup-subtitle {  
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
 }
 
 .div-infogroup {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-bottom: 35px;      
+    margin-bottom: 35px;  
+    gap: 8px; 
 }
 
-
-.title-infogroup {
-
-    padding-bottom: 8px;
-    margin: 0px;
-    line-height: 0px;
+.div-infogroup p {
+    margin: 0;
 }
 
 .infogroup p {
-
     font-family: Raleway;
     font-size: 16px;
     font-style: normal;
@@ -162,29 +156,25 @@ header {
 
 
 .div-search-bar {
-
     display: flex;
     justify-content: flex-start;
-    padding-bottom: 35px; 
+    margin-bottom: 35px; 
 }
 
 
 .search-bar {
-
     display: flex;
     align-items: center;   
 }
 
 
 .label {
-
     display: flex;
     align-items: center;    
 }
 
 
 .search-button {
-
     display: flex;
     align-items: center;
     color: var(--White, #FFF);
@@ -203,8 +193,7 @@ header {
 
 
 .form-text {
-
-    color: var(--Black, #000);
+    color: var(--Black, #000000);
     text-align: center;
     font-family: Raleway;
     font-size: 18px;
@@ -213,24 +202,28 @@ header {
     padding: 14px 0px;
     border: 1px solid var(--Grey, #F2F2F2);
     background: var(--White, #FFF);
+  
 }
 
 
+.form-text::placeholder {
+    color: #000;
+    opacity: 1;
+}
 
 
 .nav-infogroup {
-
     display: flex;
     flex-direction: row;    
     align-items: center;
     gap: 15px; 
-    padding-bottom: 35px;      
+    margin-bottom: 35px;    
+     
 }
 
 
 
 .nav-infogroup a {
-
     display: flex;
     align-items: center;   
     gap: 10px;
@@ -241,8 +234,7 @@ header {
 }
 
 
-.nav-infogroup nav {
-
+.nav-infogroup div {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -255,7 +247,6 @@ header {
 }
 
 .nav-infogroup a:hover {
-
     border-radius: 25px;
     border: 2px solid var(--grey-tint-2, #D9D9D9);
     background: var(--blue-light, #DEEBFF);
@@ -264,17 +255,20 @@ header {
 
 .div-info {
     display: flex;
+    align-items: center;
     gap: 10px;
-    padding-bottom: 35px;
+    margin-bottom: 35px;
 }
 
-
+.div-info p {
+    margin: 0;
+}
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 .hebergements-and-populaires section {
@@ -294,15 +288,14 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 30px;  
-    padding: 30px 0px 30px 0px;
+    gap: 30px;
 }
 
 
 
 .hebergements-title {
     display: flex;
-   
+    margin-bottom: 30px;   
 }
 
 
@@ -312,23 +305,43 @@ header {
     border-radius: 20px 20px 0px 0px;
 }
 
-.container .card-content {
-    padding:0px 15px;
+.container .card-content  {
+    padding: 0px 15px 15px 15px;
 }
-
 
 
 .container .card {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
+
+.container .card-txt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9px;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
 
 .footer-hebergements {
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 0px;
+    margin-top: 30px;
 }
+
+
+
+.container .card-title { 
+    margin: 0px;
+}
+
+.container .card-subtitle {
+    margin: 0;
+}
+
 
 
 
@@ -381,8 +394,8 @@ header {
 /**SECTION ACTIVITES**/
 
 .activites {
-    width: 95%;
     padding: 30px;
+    margin-bottom: 35px;
 }
 
 
@@ -393,38 +406,51 @@ header {
 
 .activites-cards {
     display: flex;
-    gap: 30px;    
+    gap: 30px;  
+    flex-wrap: wrap;  
 }
 
 .activites-cards .card {
-    width: 100%;
+   
     display: flex;
-    padding: 0px;
     flex-direction: column;
+    padding: 0px;
+    max-height: 439px;
+    max-width: 297px;
+   
+
 }
 
 .activites-cards a {
-    width: 100%;
+    display: flex;
+    
 }
 
 .activites-cards img {
-    width: 100%;
-    height: 380px;
+    min-height: 380px;
+    min-width: 100px;
     border-radius: 20px 20px 0px 0px;      
 }
 
 .activites-cards .card-content {
-    line-height: 0px;
-    padding: 20px 19px;    
+    padding:  20px 19px 20px 19px; 
+    display: flex;       
+    height: 70px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;   
 }
 
+.activites-cards .card-title {
+    margin: 0;
+
+}
 /**FOOTER**/
 
 footer {
-    padding: 20px;
+    padding: 0px;
     background: var(--Grey, #F2F2F2);
 }
-
 
 
 title-li {
@@ -444,15 +470,13 @@ title-li {
 }
 
 
-
-
-
 ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 15px;
+    padding: 20px;
     margin: 0;
 }
 
@@ -469,6 +493,33 @@ li {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+
+    .nav-infogroup {
+        display: flex;
+        flex-direction: column;       
+        align-items: flex-start;
+        
+    }
+
+
+    .nav-infogroup div {
+        display: flex;
+
+        
+    }
+
+    .nav-infogroup a {
+       
+        font-size: 16px;  
+    }
+
+
+
+
+
+
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -480,12 +531,27 @@ li {
     .populaires {
         width: 100%;
         margin-top: 50px;
+    
     }
+
+
+    .populaires-title {
+        margin-bottom: 20px;
+    }
+
 
     .populaires-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
+    }
+
+
+    .populaires-cards .card {
+        display: flex;
+        margin: 0;
+    
     }
 
     .populaires-cards a {
@@ -498,10 +564,150 @@ li {
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+        margin: 0;
+        padding: 0;
     }
+
+
+
+
+/*ACTIVITES*/
+
+
+    .activites-cards .card {
+        height: 270px;
+    }
+
+
+
+    .activites-cards img {
+        min-height: 0px;
+        min-width: 0px;
+
+    }
+
+
+
+    .activites-cards .card-content {
+
+        display: flex;       
+        height: 70px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+   
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+
+/**HEADER**/
+
+    header {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center ;
+        padding: 0;
+        margin: 0;
+        
+        margin-bottom: 30px;
+    }
+
+
+
+    .logo {
+        padding: 0;
+        margin: 0;
+    }
+
+    /*INFOGROUP*/
+
+    .search-button {
+        display: none;
+    }
+
+
+    .div-search-bar {
+        
+        display: flex;
+        justify-content: flex-start;
+        
+      
+    }
+
+
+    .search-button-responsive {
+        border-radius: 15px;
+        border: 1px solid var(--Blue, #0065FC);
+        background: var(--Blue, #0065FC);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        padding: 15px 16px;
+        position: absolute;
+        left: 335px;
+    }
+
+    .form-text {
+        position: relative;
+        color: var(--Black, #000000);
+        text-align: start;
+        font-family: Raleway;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        padding: 14px 20px;
+        border: 1px solid var(--Grey, #F2F2F2);
+        background: var(--White, #FFF);
+    }
+        
+
+
+    .nav-infogroup 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+    
+    }
+
+    .infogroup {
+       
+    }
+
+   .nav-infogroup div
+    {   
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      
+    }
+ /*
+    .nav-infogroup a 
+    {
+        width: 36%;
+        margin: 0;
+    } 
+*/
+
+
+
+    .f1 {
+        display: flex;
+        flex-direction: row;
+        width: 36%;
+
+    }
+
+
+    .f2 {
+        display: flex;
+        flex-direction: row;
+        width: 36%;
+    }
+    
+
 }
